@@ -1,0 +1,63 @@
+/* General Layout and typography */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+
+html,
+body,
+#root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F8F9FA;
+}
+
+.content-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+/*Navbar*/
+
+.navigation-menu-sml {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1.5em ;
+}
+
+.logo-sml {
+    width: 150px;
+}
+
+.customHamburguer{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+/*Navbar-Hamburguer-Menu*/
+
+/*Home*/
+
+/*About*/
+
+/*Works*/
+
+/*Services*/
+
+/*Contacts*/
+
+/*Footer*/
