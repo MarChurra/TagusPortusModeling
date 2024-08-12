@@ -1,4 +1,4 @@
-import HamburgerMenu from "./HamburguerMenu"
+import HamburgerMenu from "./HamburguerMenuOpen"
 
 function NavbarSmlScreen() {
 
