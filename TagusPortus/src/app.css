@@ -22,9 +22,10 @@ body,
 }
 
 .content-container {
-    width: 100%;
+    width: 95%;
     height: 100vh;
     margin: 0 auto;
+    padding-top: var(--navbar-height);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +33,6 @@ body,
     background-color: #F8F9FA;
     overflow-x: hidden;
     overflow-y: auto;
-    padding-top: var(--navbar-height);
 }
 
 
@@ -47,21 +47,19 @@ body,
     position: fixed;
     top: 0;
     margin: 0 auto;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     height: var(--navbar-height);
-    padding-bottom: 1em;
     z-index: 100;
     background-color: #F8F9FA;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .logo-sml {
     width: 150px;
     margin-left: 1.5em;
-    margin-top: 0.5em;
 }
 
 /*Navbar-Hamburguer-Menu*/
@@ -87,7 +85,8 @@ body,
     transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
     flex-direction: column;
     overflow-y: auto;
 }
@@ -105,10 +104,6 @@ body,
     align-items: center;
     list-style-type: none;
     margin-top: 4em;
-}
-
-.hamburguer-navbar-content ul:last-of-type {
-    justify-content: flex-end;
 }
 
 .hamburguer-navbar-content ul li {
@@ -131,19 +126,23 @@ body,
 
 /*Home*/
 .home-container {
+    width: 95%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
     overflow: hidden;
+    padding-top: var(--navbar-height);
 }
 
 .main-carrousel-imgs {
+    position: absolute;
+    top: var(--navbar-height);
     width: 100vw;
     height: auto;
-    display: block;
-    object-fit: cover;
+    max-width: 750px;
+    max-height: 425px;
 }
 
 
