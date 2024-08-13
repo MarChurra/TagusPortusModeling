@@ -2,10 +2,40 @@
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.35;
     }
+
     100% {
         opacity: 1;
     }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.sliding-in {
+    animation: slideIn 0.75s ease-in-out forwards;
+}
+
+.sliding-out {
+    animation: slideOut 0.75s ease-in-out forwards;
 }

@@ -137,6 +137,7 @@ body,
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .main-carrousel-imgs {
@@ -146,6 +147,15 @@ body,
     height: auto;
     max-width: 750px;
     max-height: 425px;
+    transition: transform 0.25s ease-in-out;
+}
+
+.current-image {
+    z-index: 1;
+}
+
+.next-image {
+    z-index: 2;
 }
 
 /*About*/
