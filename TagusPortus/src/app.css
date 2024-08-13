@@ -9,7 +9,7 @@
 }
 
 :root {
-    --navbar-height: 12.5%;
+    --navbar-height: 12.5vh;
 }
 
 html,
@@ -19,7 +19,6 @@ body,
     height: 100vh;
     background-color: #F8F9FA;
     overflow-x: hidden;
-    overflow-y: scroll;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
@@ -88,10 +87,10 @@ body,
     transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .hamburguer-navbar-content.open {
@@ -132,14 +131,12 @@ body,
 
 /*Home*/
 .home-container {
-    width: 95%;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    padding-top: var(--navbar-height);
 }
 
 .main-carrousel-imgs {
