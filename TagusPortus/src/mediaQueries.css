@@ -5,12 +5,12 @@
     }
 
     .hamburguer-navigation:first-of-type{
-       margin-top: 6em;
+       margin-top: 7em;
     }
 }
 
 
-@media screen (min-width: 750px) {
+@media screen and (min-width: 750px) {
     /* General Layout and typography */
 
     /*Navbar*/
@@ -28,7 +28,25 @@
     /*Footer*/
 }
 
-@media screen (min-width: 1250px) {
+@media screen and (min-width: 1250px) {
+    /* General Layout and typography */
+
+    /*Navbar*/
+
+    /*Home*/
+
+    /*About*/
+
+    /*Works*/
+
+    /*Services*/
+
+    /*Contacts*/
+
+    /*Footer*/
+}
+
+@media screen and (min-width: 1550px) {
     /* General Layout and typography */
 
     /*Navbar*/

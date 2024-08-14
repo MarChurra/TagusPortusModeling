@@ -1,5 +1,4 @@
 /* General Layout and typography */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,10 +17,17 @@ body,
     width: 100vw;
     height: 100vh;
     background-color: #F8F9FA;
-    overflow-x: hidden;
-    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
+}
+
+.loader-container {
+    margin-top: 1.5em;
+    background-color: transparent;
+}
+
+.loader {
+    width: 50px;
 }
 
 
@@ -44,7 +50,6 @@ body,
 }
 
 /*Navbar*/
-
 .navigation-menu-sml {
     position: fixed;
     top: 0;
@@ -65,14 +70,11 @@ body,
 }
 
 /*Navbar-Hamburguer-Menu*/
-
-
 .hamburguer-button {
     position: relative;
     z-index: 100;
     margin-right: 0.5em;
 }
-
 
 .hamburguer-navbar-content {
     position: fixed;
@@ -126,37 +128,90 @@ body,
 }
 
 .hamburguer-navbar-content ul li:active {
-    animation: ripple 0.4s ease-in;
+    animation: ripple 0.5s ease-in;
 }
 
 /*Home*/
 .home-container {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.main-carrousel-imgs {
-    position: absolute;
-    top: var(--navbar-height);
+.banner-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
-    height: auto;
     max-width: 750px;
-    max-height: 425px;
-    transition: transform 0.25s ease-in-out;
+
+    max-height: 350px;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
-.current-image {
-    z-index: 1;
+.main-carrousel-img {
+    width: 100%;
+    height: auto;
+    min-width: 320px;
+    max-width: 750px;
+    min-height: 300px;
+    max-height: 350px;
+    transition: transform 0.75s ease-in-out;
+    flex-shrink: 0;
 }
 
-.next-image {
-    z-index: 2;
+.home-banner {
+    width: 100vw;
+    padding: 1.5em;
+    text-align: center;
+    background-color: #E6CCB2;
+    border-radius: 0 0 10px 10px;
 }
+
+.home-banner p {
+    color: #465464;
+    font-weight: 600;
+}
+
+strong {
+    font-weight: 850;
+}
+
+.banner-displays {
+    width: 95%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5em;
+}
+
+.banner-display-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-display-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.banner-icons {
+    width: 75px;
+    margin-right: 1em;
+}
+
+
 
 /*About*/
 
