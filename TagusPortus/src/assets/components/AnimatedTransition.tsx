@@ -1,12 +1,18 @@
+import { motion, AnimatePresence } from "framer-motion"
 
-function AnimatedTransition() {
+interface MyComponentProps {
+  isVisible: boolean;
+}
 
-    return (
-      <>
-       <h1>Hello World</h1>
-      </>
-    )
-  }
-  
-  export default AnimatedTransition
-  
+
+export const MyComponent: React.FC<MyComponentProps> = ({ isVisible }) => (
+  <AnimatePresence>
+    {isVisible && (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      />
+    )}
+  </AnimatePresence>
+)
