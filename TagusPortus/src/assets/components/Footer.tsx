@@ -1,11 +1,24 @@
+import activeStyles from './ActiveStyles'
+
 //App Footer
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  isLargeViewPort: boolean;
+}
+
+const Footer: React.FC<FooterProps> = ({ isLargeViewPort }) => {
 
   return (
-      <footer className="app-footer">
-        <h3>Marco Churra 2024</h3>
-      </footer>
+    <>
+      {!isLargeViewPort ? (
+        <footer className="app-footer">
+          <h3>Marco Churra 2024</h3 >
+        </footer >
+      ) : <footer className="app-footer">
+        <h3>Marco Churra 2024</h3 >
+      </footer >
+      }
+    </>
   )
 }
 
