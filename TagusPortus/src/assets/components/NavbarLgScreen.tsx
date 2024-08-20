@@ -1,6 +1,6 @@
+const NavbarLgScreen: React.FC = () =>  {
 
-function NavbarLgScreen() {
-
+//Navbar for largers screens
     return (
       <nav className="navigation-menu">
        <h1>Hello World</h1>

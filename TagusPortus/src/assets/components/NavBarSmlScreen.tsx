@@ -1,15 +1,18 @@
-import HamburgerMenu from "./HamburguerMenuOpen"
+import React from 'react'
+import HamburgerMenu from './HamburguerMenuOpen'
+import { Link } from 'react-router-dom'
 
-function NavbarSmlScreen() {
+//Navbar for smaler screens, with an hamburguer menu
 
+const NavbarSmlScreen: React.FC = () => {
   return (
-
     <div className="navigation-menu-sml">
-      <img className="logo-sml" src="/icons/logo.svg" alt="Tagus Portus Logo" />
+      <Link className='logo-link' to="/">
+        <img className="logo" src="/icons/logo.svg" alt="Tagus Portus Logo" />
+      </Link>
       <HamburgerMenu />
     </div>
-
   )
 }
 
-export default NavbarSmlScreen
+export default NavbarSmlScreen;

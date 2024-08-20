@@ -1,18 +1,20 @@
-import { useState, useEffect, useCallback } from 'react';
-import LoadingComponent from '../components/LoadingComponent';
+import { useState, useEffect, useCallback } from 'react'
+import LoadingComponent from '../components/LoadingComponent'
+import CallToActionBtn from '../components/CallToActionBtn'
 
-function Home() {
-  const bannerImages = [
+const Home: React.FC = () => {
+
+  const bannerImages: string[] = [
     '/images/luxury-house1-sml.png',
     '/images/luxury-house3-sml.png',
-    '/images/luxury-house2-sml.png'
+    '/images/luxury-house2-sml.png',
   ];
 
   // Initial States
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [loadedImages, setLoadedImages] = useState(0)
-  const [isTransitioning, setIsTransitioning] = useState(false)
-  const [isLoaded, setIsLoaded] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+  const [loadedImages, setLoadedImages] = useState<number>(0);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   // Preload all images and set the isLoaded state to true once done
   useEffect(() => {
@@ -27,7 +29,7 @@ function Home() {
       const img = new Image()
       img.src = src;
       img.onload = handleImageLoad;
-      img.onerror = () => console.error(`Failed to load image: ${src}`)
+      img.onerror = () => console.error(`Failed to load image: ${src}`);
     });
   }, [bannerImages]);
 
@@ -47,7 +49,7 @@ function Home() {
     setTimeout(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % bannerImages.length)
       setIsTransitioning(false)
-    }, 750); // CSS animation duration
+    }, 600); // CSS animation duration
   }, [isTransitioning, bannerImages.length])
 
   useEffect(() => {
@@ -82,14 +84,14 @@ function Home() {
 
       <section className='banner-displays'>
         <div className='banner-display-section'>
-          <img src="/icons/icon-house.png" alt="An icon representing an house" className='banner-icons' />
+          <img src="/icons/icon-room.png" alt="An icon representing an house" className='banner-icons' />
           <div className='banner-display-info'>
             <h2>Pequenos Projetos</h2>
             <p>Nós podemos ajudá-lo a remodelar as divisões da sua casa, tornando-as elegantes, funcionais e modernas.</p>
           </div>
         </div>
         <div className='banner-display-section'>
-          <img src="/icons/icon-room.png" alt="An icon representing a room" className='banner-icons' />
+          <img src="/icons/icon-house.png" alt="An icon representing a room" className='banner-icons' />
           <div className='banner-display-info'>
             <h2>Grandes Projetos</h2>
             <p>Está à procura de construir a casa dos seus sonhos?
@@ -99,7 +101,10 @@ function Home() {
           </div>
         </div>
       </section>
-
+      <CallToActionBtn
+        description="Visualizar trabalhos"
+        link='/Works'
+      />
     </div>
   );
 }

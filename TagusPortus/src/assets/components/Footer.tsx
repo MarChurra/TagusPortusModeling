@@ -1,11 +1,12 @@
+//App Footer
 
-function Footer() {
+const Footer: React.FC = () => {
 
-    return (
-      <>
-       <h1>Hello World</h1>
-      </>
-    )
-  }
-  
-  export default Footer
+  return (
+      <footer className="app-footer">
+        <h3>Marco Churra 2024</h3>
+      </footer>
+  )
+}
+
+export default Footer
