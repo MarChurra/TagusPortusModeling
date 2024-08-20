@@ -3,7 +3,6 @@ import activeStyles from './ActiveStyles'
 import HamburgerMenu from './HamburguerMenuOpen'
 
 //Viewport prop from the App Layout determines whether to render a larger navbar or a smaller navbar with an hamburguer menu 
-
 interface NavbarProps {
     isLargeViewPort: boolean;
 }

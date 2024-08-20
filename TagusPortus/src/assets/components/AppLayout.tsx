@@ -17,9 +17,8 @@ const pageVariants: Variants = {
 
 const pageTransition = {
   type: "tween",
-  ease: "easeInOut",
-  duration: 0.5,
-  delay: 0.1,
+  ease: "easeIn",
+  duration: 0.8,
 }
 
 const AppLayout: React.FC = () => {
@@ -55,13 +54,14 @@ const AppLayout: React.FC = () => {
           variants={pageVariants}
           transition={pageTransition}
         >
+
           <div className="content-container">
             <Outlet />
-            <Footer isLargeViewPort={isLargeViewPort} />
           </div>
+
         </motion.div>
       </AnimatePresence>
-
+      <Footer isLargeViewPort={isLargeViewPort} />
     </>
   )
 }
