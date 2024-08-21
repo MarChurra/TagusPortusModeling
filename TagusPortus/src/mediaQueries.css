@@ -43,6 +43,7 @@
 
     .hamburguer-navbar-content {
         width: 40%;
+        justify-content: center;
     }
 
     .hamburguer-navbar-content ul li {
@@ -55,15 +56,22 @@
         width: 100%;
     }
 
+
     /*Home*/
-    .banner-display-info {
+    .banner-displays {
         width: 70%;
+        margin: 4.5em auto;
     }
 
     .banner-icons {
         width: 80px;
-        margin-right: 1.5em;
+        margin-right: 1.75em;
     }
+
+    .banner-display-section {
+        width: 75%;
+    }
+
 
     /*About*/
 

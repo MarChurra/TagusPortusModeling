@@ -1,20 +1,37 @@
 import { useState, useEffect, useCallback } from 'react'
+import { useOutletContext } from 'react-router-dom'
 import LoadingComponent from '../components/LoadingComponent'
 import CallToActionBtn from '../components/CallToActionBtn'
 
+type AppLayoutContext = {
+  isLargeViewPort: boolean
+}
+
 const Home: React.FC = () => {
 
-  const bannerImages: string[] = [
+  // Initial States
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0)
+  const [loadedImages, setLoadedImages] = useState<number>(0)
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false)
+  const [isLoaded, setIsLoaded] = useState<boolean>(false)
+
+  //Context prop for the largeViewPort check
+  const { isLargeViewPort } = useOutletContext<AppLayoutContext>()
+
+  //Two versions of the banner images, to be displayed according to the current viewport of the device
+  const smallBannerImages: readonly string[] = [
     '/images/luxury-house1-sml.png',
     '/images/luxury-house3-sml.png',
     '/images/luxury-house2-sml.png',
-  ];
+  ]
 
-  // Initial States
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  const [loadedImages, setLoadedImages] = useState<number>(0);
-  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
-  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const largeBannerImages: readonly string[] = [
+    '/images/luxury-house1-lg.png',
+    '/images/luxury-house3-lg.png',
+    '/images/luxury-house2-lg.png',
+  ]
+
+  const bannerImages = isLargeViewPort ? largeBannerImages : smallBannerImages
 
   // Preload all images and set the isLoaded state to true once done
   useEffect(() => {
@@ -23,15 +40,15 @@ const Home: React.FC = () => {
     const handleImageLoad = () => {
       loadedCount += 1
       setLoadedImages(loadedCount)
-    };
+    }
 
     bannerImages.forEach((src) => {
       const img = new Image()
-      img.src = src;
-      img.onload = handleImageLoad;
-      img.onerror = () => console.error(`Failed to load image: ${src}`);
-    });
-  }, [bannerImages]);
+      img.src = src
+      img.onload = handleImageLoad
+      img.onerror = () => console.error(`Failed to load image: ${src}`)
+    })
+  }, [bannerImages])
 
   // Run the image carousel when all the images have been downloaded
   useEffect(() => {
@@ -49,18 +66,18 @@ const Home: React.FC = () => {
     setTimeout(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % bannerImages.length)
       setIsTransitioning(false)
-    }, 600); // CSS animation duration
+    }, 600) // CSS animation duration
   }, [isTransitioning, bannerImages.length])
 
   useEffect(() => {
-    if (!isLoaded) return;
+    if (!isLoaded) return
 
-    const interval = setInterval(goToNextImg, 3500);
+    const interval = setInterval(goToNextImg, 3500)
 
     // Cleanup timers on unmount
     return () => {
       clearInterval(interval)
-    };
+    }
   }, [goToNextImg, isLoaded])
 
   return (
@@ -106,7 +123,7 @@ const Home: React.FC = () => {
         link='/Works'
       />
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home

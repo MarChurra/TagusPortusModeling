@@ -8,6 +8,8 @@ const HamburgerMenu: React.FC = () => {
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
+    const closeMenu = () => setIsOpen(false);
+
     return (
         <div className="hamburger-menu">
             <div className="hamburguer-button">
@@ -30,6 +32,7 @@ const HamburgerMenu: React.FC = () => {
                                 to="/"
                                 end
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                onClick={closeMenu}
                             >
                                 Início
                             </NavLink>
@@ -38,6 +41,7 @@ const HamburgerMenu: React.FC = () => {
                             <NavLink
                                 to="/About"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                onClick={closeMenu}
                             >
                                 Quem Somos
                             </NavLink>
@@ -46,6 +50,7 @@ const HamburgerMenu: React.FC = () => {
                             <NavLink
                                 to="/Works"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                onClick={closeMenu}
                             >
                                 As Nossas Obras
                             </NavLink>
@@ -54,6 +59,7 @@ const HamburgerMenu: React.FC = () => {
                             <NavLink
                                 to="/Services"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                onClick={closeMenu}
                             >
                                 Serviços
                             </NavLink>
@@ -62,6 +68,7 @@ const HamburgerMenu: React.FC = () => {
                             <NavLink
                                 to="/Contacts"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                onClick={closeMenu}
                             >
                                 Contactos
                             </NavLink>
@@ -73,6 +80,7 @@ const HamburgerMenu: React.FC = () => {
                             <NavLink
                                 to="/privacy-policies"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                onClick={closeMenu}
                             >
                                 Política de Privacidade
                             </NavLink>
@@ -81,6 +89,7 @@ const HamburgerMenu: React.FC = () => {
                             <NavLink
                                 to="/legal-warnings"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                onClick={closeMenu}
                             >
                                 Aviso Legal
                             </NavLink>
@@ -89,6 +98,7 @@ const HamburgerMenu: React.FC = () => {
                             <NavLink
                                 to="/cookies-policies"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                onClick={closeMenu}
                             >
                                 Política de Cookies
                             </NavLink>
