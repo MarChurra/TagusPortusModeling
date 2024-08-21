@@ -66,7 +66,7 @@ const Home: React.FC = () => {
     setTimeout(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % bannerImages.length)
       setIsTransitioning(false)
-    }, 600) // CSS animation duration
+    }, 550) // CSS animation duration
   }, [isTransitioning, bannerImages.length])
 
   useEffect(() => {
@@ -95,8 +95,8 @@ const Home: React.FC = () => {
       )}
 
       <section className='home-banner'>
-        <p>Se tem um <strong>sonho</strong></p>
-        <p>Nós tornamo-lo <strong>realidade</strong></p>
+        <h3>Se tem um <strong>sonho</strong></h3>
+        <h3>Nós tornamo-lo <strong>realidade</strong></h3>
       </section>
 
       <section className='banner-displays'>

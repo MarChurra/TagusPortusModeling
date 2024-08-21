@@ -22,14 +22,18 @@
     }
 }
 
-@media screen and (min-width: 600px) {}
+@media screen and (min-width: 600px) {
+    .banner-displays {
+        width: 70%;
+    }
+}
 
 @media screen and (min-width: 750px) {
 
     /* General Layout and typography */
     /*Home*/
     .banner-displays {
-       width: 80%;
+        width: 80%;
     }
 
     .loader {
@@ -53,7 +57,6 @@
     }
 
     .hamburguer-navbar-content ul li {
-        font-size: 1.1rem;
         width: 100%;
 
     }
@@ -89,12 +92,22 @@
     /*Footer*/
 }
 
+@media screen and (min-width: 900px) {
+    .banner-displays {
+        width: 60%;
+    }
+
+    .hamburguer-navbar-content {
+        width: 30%;
+    }
+}
+
 @media screen and (min-width: 1250px) {
 
     /* General Layout and typography */
 
     :root {
-        --navbar-height: 15vh;
+        --navbar-height: 12.5vh;
     }
 
     .content-container {
@@ -120,7 +133,16 @@
     }
 
     .logo {
-        width: 200px;
+        width: 175px;
+        transition: transform 0.25s ease;
+    }
+
+    .logo:hover {
+        transform: scale(1.05);
+    }
+
+    .logo:active {
+        animation: ripple 0.5s ease-in;
     }
 
     .navigation-lg-screen {
@@ -143,9 +165,8 @@
 
     .navigation-lg-screen li a {
         text-decoration: none;
-        font-size: 1.1rem;
         color: #465464;
-        text-underline-offset: 0.25em;
+        text-underline-offset: 5px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -162,6 +183,24 @@
 
     /*Home*/
 
+    .banner-images-container {
+        max-height: 550px;
+    }
+
+    .main-carrousel-img {
+        max-height: 600px;
+    }
+
+    .banner-displays {
+        gap: 4em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-display-info {
+        width: 60%;
+    }
+
     /*About*/
 
     /*Works*/
@@ -171,6 +210,50 @@
     /*Contacts*/
 
     /*Footer*/
+    .app-footer {
+        position: initial;
+    }
+
+    .footer-navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .footer-navigation ul {
+        padding: 1em 0;
+    }
+
+    .footer-navigation ul a {
+        padding: 1em;
+        text-decoration: none;
+        color: #465464;
+        font-weight: bold;
+    }
+
+    .app-footer a {
+        margin: 1em 0;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+    }
+
+    .footer-navigation ul a,
+    .app-footer a {
+        transition: transform 0.25s ease;
+    }
+
+    .policies-links:hover,
+    .app-footer a:hover {
+        cursor: pointer !important;
+        transform: scale(1.1) !important;
+    }
+
+    a .policies-links {
+        width: 500px;
+    }
 }
 
 @media screen and (min-width: 1550px) {
