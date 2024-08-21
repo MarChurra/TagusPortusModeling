@@ -22,9 +22,15 @@
     }
 }
 
+@media screen and (min-width: 600px) {}
 
 @media screen and (min-width: 750px) {
+
     /* General Layout and typography */
+    /*Home*/
+    .banner-displays {
+       width: 80%;
+    }
 
     .loader {
         width: 75px;
@@ -59,7 +65,6 @@
 
     /*Home*/
     .banner-displays {
-        width: 70%;
         margin: 4.5em auto;
     }
 
@@ -85,9 +90,75 @@
 }
 
 @media screen and (min-width: 1250px) {
+
     /* General Layout and typography */
 
+    :root {
+        --navbar-height: 15vh;
+    }
+
+    .content-container {
+        height: 100%;
+        padding-top: var(--navbar-height);
+    }
+
     /*Navbar*/
+
+    .navigation-menu-lg {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 100vw;
+        height: var(--navbar-height);
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        background-color: #F8F9FA;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .navigation-lg-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: var(--navbar-height);
+        list-style-type: none;
+    }
+
+    .navigation-lg-screen .navigation-lg-screen li,
+    .navigation-lg-screen li a {
+        width: 100%;
+        display: block;
+        height: var(--navbar-height);
+        padding: 0 2em;
+        font-weight: 600;
+    }
+
+    .navigation-lg-screen li a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: #465464;
+        text-underline-offset: 0.25em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navigation-lg-screen li a:hover {
+        background-color: #E6CCB2;
+    }
+
+    .navigation-lg-screen li a:active {
+        animation: ripple 0.5s ease-in;
+    }
 
     /*Home*/
 
