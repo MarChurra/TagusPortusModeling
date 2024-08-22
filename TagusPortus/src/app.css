@@ -287,23 +287,57 @@ strong {
 /*Contacts*/
 
 /*Footer*/
-.app-footer {
+.app-footer,
+.app-footer-lg {
     width: 100%;
     background-color: #E6CCB2;
-    color: #465464;
-    padding: 1em;
-    opacity: 0.9;
-    position: fixed;
-    bottom: 0;
+    padding: 1.25em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.app-footer a {
+.app-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.social-media-nav ul {
+    display: flex;
+    gap: 0.75em;    
+}
+
+.social-media-nav ul {
+    margin-left: 0.25em;
+}
+
+.author {
+    color: #465464;
+    text-decoration: underline;
+    text-underline-offset: 2.5px;
+    transition: transform 0.25s ease;
+}
+
+.app-footer a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.app-footer,
+.app-footer-lg a {
     font-weight: 800;
     text-align: center;
     text-decoration: none;
     color: #465464;
+}
+
+.social-media-icon,
+.social-media-icon a,
+.social-media-icon a img {
+    width: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
 }
