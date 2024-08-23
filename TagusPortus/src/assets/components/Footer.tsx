@@ -61,7 +61,7 @@ const Footer: React.FC<FooterProps> = ({ isLargeViewPort }) => {
 
 
             <a className='author' href="https://www.churradesigns.com/">
-              Marco Churra 2024
+              2024 Marco Churra
             </a>
 
           </nav>
@@ -91,7 +91,7 @@ const Footer: React.FC<FooterProps> = ({ isLargeViewPort }) => {
           </nav>
 
           <a className='author' href="https://www.churradesigns.com/">
-            Marco Churra 2024
+            2024 Marco Churra
           </a>
 
         </footer >

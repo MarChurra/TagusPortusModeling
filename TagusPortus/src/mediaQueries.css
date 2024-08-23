@@ -320,17 +320,45 @@
 
     /* General Layout and typography */
 
+    p,
+    a {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .cta-btn {
+        width: 200px;
+        padding: 1.5em;
+    }
+
+
     /*Navbar*/
+    .logo {
+        width: 275px;
+    }
 
     /*Home*/
 
     .banner-images-container {
-        max-height: 1250px;
+        max-height: 1125px;
     }
 
     .main-carrousel-img {
-        max-height: 1250px;
+        max-height: 1125px;
     }
+
+    .banner-displays {
+        width: 50%;
+        margin: 7.5em 0;
+    }
+
 
     /*About*/
 
@@ -341,5 +369,9 @@
     /*Contacts*/
 
     /*Footer*/
-
+    .social-media-icon,
+    .social-media-icon a,
+    .social-media-icon a img {
+        width: 35px;
+    }
 }
