@@ -78,7 +78,7 @@ const HamburgerMenu: React.FC = () => {
                     <ul className="hamburguer-navigation">
                         <li>
                             <NavLink
-                                to="/Privacy-policies"
+                                to="/Privacy-Policies"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
                                 onClick={closeMenu}
                             >
@@ -87,7 +87,7 @@ const HamburgerMenu: React.FC = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="/Legal-warnings"
+                                to="/Legal-Warnings"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
                                 onClick={closeMenu}
                             >
@@ -96,7 +96,7 @@ const HamburgerMenu: React.FC = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="/Cookies-policies"
+                                to="/Cookies-Policies"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
                                 onClick={closeMenu}
                             >

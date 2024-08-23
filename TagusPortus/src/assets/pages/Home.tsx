@@ -66,7 +66,7 @@ const Home: React.FC = () => {
     setTimeout(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % bannerImages.length)
       setIsTransitioning(false)
-    }, 550) // CSS animation duration
+    }, 500) // CSS animation duration
   }, [isTransitioning, bannerImages.length])
 
   useEffect(() => {
@@ -119,7 +119,7 @@ const Home: React.FC = () => {
         </div>
       </section>
       <CallToActionBtn
-        description="Visualizar trabalhos"
+        description="Visualizar Obras"
         link='/Works'
       />
     </div>
