@@ -80,7 +80,7 @@ body,
 .hamburguer-button {
     position: relative;
     z-index: 100;
-    margin-right: 0.25em;
+    margin-right: 0.5em;
 }
 
 .hamburguer-navbar-content {

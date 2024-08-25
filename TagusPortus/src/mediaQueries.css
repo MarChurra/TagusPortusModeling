@@ -287,7 +287,25 @@
 }
 
 @media screen and (min-width: 1550px) {
+
     /* General Layout and typography */
+    p,
+    a {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .cta-btn {
+        width: 200px;
+        padding: 1.5em;
+    }
 
     /*Navbar*/
 
@@ -307,7 +325,7 @@
 
     .banner-displays {
         gap: 0;
-        margin: 10em 0;
+        margin: 7.5em 0;
     }
 
     /*About*/
@@ -324,25 +342,6 @@
 @media screen and (min-width: 2500px) and (max-width: 5000px) {
 
     /* General Layout and typography */
-
-    p,
-    a {
-        font-size: 1.2rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    h3 {
-        font-size: 1.3rem;
-    }
-
-    .cta-btn {
-        width: 200px;
-        padding: 1.5em;
-    }
-
 
     /*Navbar*/
     .logo {
