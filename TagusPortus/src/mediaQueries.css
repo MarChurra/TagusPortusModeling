@@ -298,11 +298,16 @@
     /*Home*/
 
     .banner-images-container {
-        max-height: 850px;
+        max-height: 1000px;
     }
 
     .main-carrousel-img {
-        max-height: 825px;
+        max-height: 1000px;
+    }
+
+    .banner-displays {
+        gap: 0;
+        margin: 10em 0;
     }
 
     /*About*/
@@ -316,7 +321,7 @@
     /*Footer*/
 }
 
-@media screen and (min-width: 2000px) and (max-width: 5000px) {
+@media screen and (min-width: 2500px) and (max-width: 5000px) {
 
     /* General Layout and typography */
 
@@ -341,17 +346,17 @@
 
     /*Navbar*/
     .logo {
-        width: 275px;
+        width: 250px;
     }
 
     /*Home*/
 
     .banner-images-container {
-        max-height: 1125px;
+        max-height: 1250px;
     }
 
     .main-carrousel-img {
-        max-height: 1125px;
+        max-height: 1250px;
     }
 
     .banner-displays {
