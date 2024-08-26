@@ -38,21 +38,21 @@ const Footer: React.FC<FooterProps> = ({ isLargeViewPort }) => {
             <ul className='policies-container'>
               <NavLink
                 className={"policies-links"}
-                to="/Privacy-Policies"
+                to="/privacy-policies"
                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
               >
                 Política de Privacidade
               </NavLink>
               <NavLink
                 className={"policies-links"}
-                to="/Legal-Warnings"
+                to="/legal-warnings"
                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
               >
                 Avisos Legais
               </NavLink>
               <NavLink
                 className={"policies-links"}
-                to="/Cookies-Policies"
+                to="/cookies-policies"
                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
               >
                 Política de Cookies

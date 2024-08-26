@@ -5,25 +5,38 @@
     padding: 0;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    line-height: 1.5;
+    text-shadow: 0 0 0.25px black;
+}
+
+html {
+    scroll-padding-top: var(--navbar-height);
 }
 
 :root {
     --navbar-height: 15vh;
 }
 
-h2 {
-    font-size: 1.2rem;
+p {
+    font-weight: 600;
+}
+
+* h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
 }
 
 html,
 body,
 #root {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     background-color: #F8F9FA;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
@@ -41,14 +54,15 @@ body,
 
 .content-container {
     width: 100%;
-    max-height: 100%;
+    min-height: calc(100vh - var(--navbar-height));
     margin: 0 auto;
     padding-top: var(--navbar-height);
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #F8F9FA;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 
@@ -201,7 +215,7 @@ body,
 }
 
 strong {
-    font-weight: 850;
+    font-weight: 800;
 }
 
 .banner-displays {
@@ -280,6 +294,58 @@ strong {
 
 /*About*/
 
+.about-info-heading {
+    background-color: #E6CCB2;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 2em;
+}
+
+.about-info-heading,
+.about-container {
+    width: 90%;
+    color: #465464;
+    font-weight: 500;
+}
+
+.about-container h2 {
+    text-decoration: underline;
+    text-underline-offset: 0.35em;
+    margin: 2.5em 0 1em 0;
+}
+
+.about-info-row-id {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.about-container,
+.about-info-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.about-info-row {
+    gap: 1.25em;
+    width: 100vw;
+    padding: 2em;
+}
+
+.about-info-row:nth-child(even) {
+    background-color: #E6CCB2;
+}
+
+.about-container img {
+    width: 125px;
+    height: auto;
+}
+
+
 /*Works*/
 
 /*Services*/
@@ -306,7 +372,7 @@ strong {
 
 .social-media-nav ul {
     display: flex;
-    gap: 0.75em;    
+    gap: 0.75em;
 }
 
 .social-media-nav ul {

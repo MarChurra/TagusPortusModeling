@@ -18,16 +18,13 @@ const pageVariants: Variants = {
 const pageTransition = {
   type: "tween",
   ease: "easeIn",
-  duration: 0.7,
-  delay: 0.25,
+  duration: 0.5,
 }
 
 const AppLayout: React.FC = () => {
   const location = useLocation()
-  console.log(location)
 
   //Logic to check the screen width, to adjust which navbar and footer to show
-
   const [isLargeViewPort, setIsLargeViewPort] = useState<boolean>(window.innerWidth >= 1250)
 
   useEffect(() => {
@@ -66,6 +63,7 @@ const AppLayout: React.FC = () => {
       </AnimatePresence >
 
       <Footer isLargeViewPort={isLargeViewPort} />
+
     </>
   )
 }

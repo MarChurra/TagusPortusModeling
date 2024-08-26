@@ -39,7 +39,7 @@ const HamburgerMenu: React.FC = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="/About"
+                                to="/about"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
                                 onClick={closeMenu}
                             >
@@ -48,7 +48,7 @@ const HamburgerMenu: React.FC = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="/Works"
+                                to="/works"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
                                 onClick={closeMenu}
                             >
@@ -57,7 +57,7 @@ const HamburgerMenu: React.FC = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="/Services"
+                                to="/services"
                                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
                                 onClick={closeMenu}
                             >

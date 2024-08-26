@@ -31,6 +31,7 @@
 @media screen and (min-width: 750px) {
 
     /* General Layout and typography */
+
     /*Home*/
     .banner-displays {
         width: 80%;
@@ -79,8 +80,10 @@
         width: 75%;
     }
 
-
     /*About*/
+    .about-info-row p {
+        width: 80%;
+    }
 
     /*Works*/
 
@@ -199,11 +202,11 @@
     /*Home*/
 
     .banner-images-container {
-        max-height: 550px;
+        max-height: 545px;
     }
 
     .main-carrousel-img {
-        max-height: 600px;
+        max-height: 545px;
     }
 
     .banner-displays {
@@ -217,6 +220,40 @@
     }
 
     /*About*/
+
+    .about-info-heading {
+        margin: 3em 0em;
+    }
+
+    .about-info-row {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5em;
+        padding: 3.5em;
+        transition: all 0.3s;
+    }
+
+    .about-info-row p {
+        width: 70%;
+    }
+
+    .about-info-row:hover {
+        z-index: 50;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        transform: scaleX(1.025);
+    }
+
+    .about-info-row:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .about-container {
+        gap: 0;
+    }
+
+    .about-container img {
+        width: 150px;
+    }
 
     /*Works*/
 
@@ -289,6 +326,10 @@
 @media screen and (min-width: 1550px) {
 
     /* General Layout and typography */
+    :root {
+        --navbar-height: 10vh;
+    }
+
     p,
     a {
         font-size: 1.2rem;
@@ -316,11 +357,11 @@
     /*Home*/
 
     .banner-images-container {
-        max-height: 1000px;
+        max-height: 1050px;
     }
 
     .main-carrousel-img {
-        max-height: 1000px;
+        max-height: 1050px;
     }
 
     .banner-displays {
@@ -329,6 +370,9 @@
     }
 
     /*About*/
+    .about-info-row p {
+        width: 50%;
+    }
 
     /*Works*/
 
@@ -337,6 +381,11 @@
     /*Contacts*/
 
     /*Footer*/
+    .social-media-icon,
+    .social-media-icon a,
+    .social-media-icon a img {
+        width: 35px;
+    }
 }
 
 @media screen and (min-width: 2500px) and (max-width: 5000px) {
@@ -351,18 +400,17 @@
     /*Home*/
 
     .banner-images-container {
-        max-height: 1250px;
+        max-height: 1500px;
     }
 
     .main-carrousel-img {
-        max-height: 1250px;
+        max-height: 1500px;
     }
 
     .banner-displays {
         width: 50%;
-        margin: 7.5em 0;
+        margin: 5em 0;
     }
-
 
     /*About*/
 
@@ -373,9 +421,5 @@
     /*Contacts*/
 
     /*Footer*/
-    .social-media-icon,
-    .social-media-icon a,
-    .social-media-icon a img {
-        width: 35px;
-    }
+
 }

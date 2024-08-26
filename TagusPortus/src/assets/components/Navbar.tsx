@@ -13,7 +13,8 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
         <>
             {isLargeViewPort ? (
                 <header className="navigation-menu-lg">
-                    <Link className="logo-link" to="/">
+                    <Link className="logo-link"
+                        to="/">
                         <img className="logo" src="/icons/logo.svg" alt="Tagus Portus Logo" />
                     </Link>
                     <nav>
@@ -29,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/About"
+                                    to="/about"
                                     style={({ isActive }) => (isActive ? activeStyles : undefined)}
                                 >
                                     Quem Somos
@@ -37,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/Works"
+                                    to="/works"
                                     style={({ isActive }) => (isActive ? activeStyles : undefined)}
                                 >
                                     As Nossas Obras
@@ -45,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/Services"
+                                    to="/services"
                                     style={({ isActive }) => (isActive ? activeStyles : undefined)}
                                 >
                                     Serviços
@@ -53,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/Contacts"
+                                    to="/contacts"
                                     style={({ isActive }) => (isActive ? activeStyles : undefined)}
                                 >
                                     Contactos

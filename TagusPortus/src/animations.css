@@ -72,3 +72,14 @@
 .fade-out {
     animation: fadeOut 0.6s ease-in-out forwards;
 }
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+}

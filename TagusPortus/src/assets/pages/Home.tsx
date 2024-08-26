@@ -72,7 +72,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     if (!isLoaded) return
 
-    const interval = setInterval(goToNextImg, 3500)
+    const interval = setInterval(goToNextImg, 4500)
 
     // Cleanup timers on unmount
     return () => {
