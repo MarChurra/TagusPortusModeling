@@ -347,6 +347,27 @@ strong {
 
 
 /*Works*/
+.works-heading {
+    margin: 1.5em auto;
+    width: 80%;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    color: #465464;
+}
+
+.works-grid-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    background-color: #E6CCB2;
+    border-radius: 10px;
+    width: 90%;
+    margin-bottom: 2em;
+}
 
 /*Services*/
 
