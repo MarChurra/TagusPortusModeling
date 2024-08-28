@@ -13,8 +13,11 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
         <>
             {isLargeViewPort ? (
                 <header className="navigation-menu-lg">
-                    <Link className="logo-link"
-                        to="/">
+                    <Link
+                        className="logo-link"
+                        to="/"
+                    >
+
                         <img className="logo" src="/icons/logo.svg" alt="Tagus Portus Logo" />
                     </Link>
                     <nav>
