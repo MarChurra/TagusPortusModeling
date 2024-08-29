@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import workImages from '../../workImagesDB.tsx';
 
 const Works: React.FC = () => {
@@ -30,19 +30,21 @@ const Works: React.FC = () => {
     <>
       <h2 className="works-heading">Um vislumbre dos nossos projetos</h2>
       <section className="works-grid-display">
-        {workImages.map((image, index) => {
-          return (
-            <div
-              key={index}
-              className={`works-grid-images ${classNamesForGallery[randomIndexForGalleryImages()]}`} >
-              <img
-                src={image.url}
-                alt="The photograph for one of our projects"
-                onClick={() => handleImageExpansion(image.url)} />
-            </div>
-          )
-        })
-        }
+        <div className='work-img-container'>
+          {workImages.map((image, index) => {
+            return (
+              <div
+                key={index}
+                className={`works-grid-images ${classNamesForGallery[randomIndexForGalleryImages()]}`} >
+                <img
+                  src={image.url}
+                  alt="The photograph for one of our projects"
+                  onClick={() => handleImageExpansion(image.url)} />
+              </div>
+            )
+          })
+          }
+        </div>
       </section>
 
       {expandedImage ? (

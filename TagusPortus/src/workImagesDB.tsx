@@ -2,7 +2,6 @@
 
 const workImages: { url: string }[] = [
     { url: './images/r-bathroom1.png' },
-    { url: './images/r-bathroom2.png' },
     { url: './images/r-bedroom1.png' },
     { url: './images/r-bedroom2.png' },
     { url: './images/r-kitchen1.png' },

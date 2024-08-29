@@ -72,7 +72,7 @@ body,
     position: fixed;
     top: 0;
     margin: 0 auto;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,7 +95,7 @@ body,
 .hamburguer-button {
     position: relative;
     z-index: 100;
-    margin-right: 0.5em;
+    margin-right: 1em;
 }
 
 .hamburguer-navbar-content {
@@ -118,6 +118,10 @@ body,
     box-shadow: -5px 0px 5px 1px rgba(0, 0, 0, 0.50);
     -webkit-box-shadow: -5px 0px 5px 1px rgba(0, 0, 0, 0.50);
     -moz-box-shadow: -5px 0px 5px 1px rgba(0, 0, 0, 0.50);
+}
+
+.hamburguer-navbar-content::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -266,7 +270,7 @@ strong {
 .cta-btn {
     width: 150px;
     text-align: center;
-    margin-bottom: 6em;
+    margin-bottom: 3em;
     line-height: 1.25;
     border-radius: 10px 5px 10px 5px;
     border: 0.25px solid black;
@@ -328,7 +332,6 @@ strong {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5em;
 }
 
 .about-info-row {
@@ -358,38 +361,42 @@ strong {
 }
 
 .works-grid-display {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-    padding: 2em;
-    background-color: #E6CCB2;
+    text-align: center;
+    overflow: hidden;
     border-radius: 10px;
     width: 90%;
     margin-bottom: 2em;
+    padding: 1em;
+    background-color: #E6CCB2;
+}
+
+.work-img-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 2em;
+    padding-bottom: 0.5em;
 }
 
 .works-grid-images {
-    cursor: pointer;
-    position: relative;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+.works-grid-images::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
 }
 
 .works-grid-images img {
-    width: 225px;
+    width: 240px;
+    height: auto;
     border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.works-grid-display,
-.works-grid-images img {
-    border: 5px solid #774936;
-}
-
-.works-grid-images img:hover {
-    cursor: pointer;
-    transform: scale(1.05) translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .expanded-image-container {

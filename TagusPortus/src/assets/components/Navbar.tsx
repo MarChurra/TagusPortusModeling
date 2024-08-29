@@ -1,6 +1,7 @@
 import { NavLink, Link } from 'react-router-dom'
 import activeStyles from './ActiveStyles'
 import HamburgerMenu from './HamburguerMenuOpen'
+import scrollToTop from './ScrollToTop.tsx'
 
 //Viewport prop from the App Layout determines whether to render a larger navbar or a smaller navbar with an hamburguer menu 
 interface NavbarProps {
@@ -16,9 +17,13 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
                     <Link
                         className="logo-link"
                         to="/"
+                        onClick={scrollToTop}
                     >
 
-                        <img className="logo" src="/icons/logo.svg" alt="Tagus Portus Logo" />
+                        <img className="logo"
+                            src="/icons/logo.svg"
+                            alt="Tagus Portus Logo" />
+
                     </Link>
                     <nav>
                         <ul className="navigation-lg-screen">
@@ -27,6 +32,7 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
                                     to="/"
                                     end
                                     style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                    onClick={scrollToTop}
                                 >
                                     Início
                                 </NavLink>
@@ -35,6 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
                                 <NavLink
                                     to="/about"
                                     style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                    onClick={scrollToTop}
                                 >
                                     Quem Somos
                                 </NavLink>
@@ -43,6 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
                                 <NavLink
                                     to="/works"
                                     style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                    onClick={scrollToTop}
                                 >
                                     As Nossas Obras
                                 </NavLink>
@@ -51,6 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
                                 <NavLink
                                     to="/services"
                                     style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                    onClick={scrollToTop}
                                 >
                                     Serviços
                                 </NavLink>
@@ -59,6 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
                                 <NavLink
                                     to="/contacts"
                                     style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                                    onClick={scrollToTop}
                                 >
                                     Contactos
                                 </NavLink>
@@ -69,7 +79,8 @@ const Navbar: React.FC<NavbarProps> = ({ isLargeViewPort }) => {
             ) :
                 <header className="navigation-menu-sml">
                     <Link className='logo-link' to="/">
-                        <img className="logo" src="/icons/logo.svg" alt="Tagus Portus Logo" />
+                        <img className="logo" src="/icons/logo.svg" alt="Tagus Portus Logo"
+                            onClick={scrollToTop} />
                     </Link>
                     <HamburgerMenu />
                 </header>}

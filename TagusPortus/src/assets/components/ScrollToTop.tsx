@@ -1,19 +1,11 @@
 //Scrolls to the top of the page upon switching pages 
-import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+const scrollToTop = () => {
+    console.log('activated')
+    window.scrollTo({
+        top: 0,
+        left: 0,
+    });
+};
 
-const ScrollToTop: React.FC = () => {
-    const { pathname } = useLocation()
 
-    useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
-    }, [pathname]);
-
-    return null
-}
-
-export default ScrollToTop
+export default scrollToTop

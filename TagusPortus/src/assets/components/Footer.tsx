@@ -1,5 +1,6 @@
 import activeStyles from './ActiveStyles'
 import { NavLink } from 'react-router-dom'
+import scrollToTop from './ScrollToTop.tsx';
 
 //App Footer
 
@@ -40,6 +41,7 @@ const Footer: React.FC<FooterProps> = ({ isLargeViewPort }) => {
                 className={"policies-links"}
                 to="/privacy-policies"
                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                onClick={scrollToTop}
               >
                 Política de Privacidade
               </NavLink>
@@ -47,6 +49,7 @@ const Footer: React.FC<FooterProps> = ({ isLargeViewPort }) => {
                 className={"policies-links"}
                 to="/legal-warnings"
                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                onClick={scrollToTop}
               >
                 Avisos Legais
               </NavLink>
@@ -54,6 +57,7 @@ const Footer: React.FC<FooterProps> = ({ isLargeViewPort }) => {
                 className={"policies-links"}
                 to="/cookies-policies"
                 style={({ isActive }) => (isActive ? activeStyles : undefined)}
+                onClick={scrollToTop}
               >
                 Política de Cookies
               </NavLink>
