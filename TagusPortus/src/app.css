@@ -94,8 +94,13 @@ body,
 
 .hamburguer-button {
     position: relative;
-    z-index: 100;
+    width: 100%;
+    z-index: 200;
     margin-right: 1em;
+}
+
+.hamburguer-react {
+    width: 100px;
 }
 
 .hamburguer-navbar-content {
@@ -123,7 +128,6 @@ body,
 .hamburguer-navbar-content::-webkit-scrollbar {
     display: none;
 }
-
 
 .hamburguer-navbar-content.open {
     transform: translateX(0);
