@@ -14,28 +14,17 @@ const Works: React.FC = () => {
     setExpandedImage(null)
   };
 
-  //Store the class names in an array to distribute them randomly
-  const classNamesForGallery: string[] = [
-    "small-image",
-    "medium-image",
-    "large-image"
-  ]
-
-  //Logic to obtain a random number, to attribute a random index of the className arrays to each image
-  const randomIndexForGalleryImages = (): number => {
-    return Math.floor(Math.random() * classNamesForGallery.length)
-  }
 
   return (
     <>
-      <h2 className="works-heading">Um vislumbre dos nossos projetos</h2>
+      <h2 className="works-heading"> Um vislumbre dos nossos projetos</h2>
       <section className="works-grid-display">
-        <div className='work-img-container'>
+        <div className='works-img-container'>
           {workImages.map((image, index) => {
             return (
               <div
                 key={index}
-                className={`works-grid-images ${classNamesForGallery[randomIndexForGalleryImages()]}`} >
+                className={`works-grid-images`} >
                 <img
                   src={image.url}
                   alt="The photograph for one of our projects"

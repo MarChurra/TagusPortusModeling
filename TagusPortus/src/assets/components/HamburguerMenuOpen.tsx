@@ -33,6 +33,7 @@ const HamburgerMenu: React.FC = () => {
                     />
                 </div>
 
+                <div className={`hamburguer-ceiling ${isOpen ? 'open' : ''}`}> </div>
 
                 <div className={`hamburguer-navbar-content ${isOpen ? 'open' : ''}`}>
                     <nav>

@@ -8,6 +8,7 @@ import AppLayout from './assets/components/AppLayout.tsx'
 import Home from './assets/pages/Home.tsx'
 import About from './assets/pages/About.tsx'
 import Works from './assets/pages/Works.tsx'
+import Services from './assets/pages/Services.tsx'
 
 //Style Sheets imports
 import '/src/app.css'
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='works' element={<Works />} />
+          <Route path='services' element={<Services />} />
         </Route>
       </Routes>
     </BrowserRouter>

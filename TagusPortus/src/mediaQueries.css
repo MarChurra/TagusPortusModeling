@@ -4,12 +4,63 @@
     :root {
         --navbar-height: 30vh;
     }
+}
 
+@media screen and (min-height: 970px) {
+
+    .content-container {
+        min-height: calc(110vh - var(--navbar-height));
+    }
 }
 
 @media screen and (min-width: 300px) {
     .logo {
         width: 150px;
+    }
+}
+
+@media screen and (min-width: 350px) {
+
+    .works-img-container {
+        width: 300px;
+        height: 250px;
+        overflow-y: hidden;
+        padding-bottom: 10px;
+        margin-bottom: 3.5em;
+    }
+
+    .works-grid-images,
+    .works-grid-images img {
+        width: 300px;
+        height: 200px;
+    }
+
+}
+
+@media screen and (min-width: 400px) {
+
+    .works-heading {
+        width: 60%;
+    }
+
+    .works-img-container {
+        width: 350px;
+        height: 300px;
+        overflow-y: hidden;
+        padding-bottom: 10px;
+        margin-bottom: 3.5em;
+    }
+
+    .works-grid-images,
+    .works-grid-images img {
+        width: 350px;
+        height: 250px;
+    }
+}
+
+@media screen and (min-height: 600px) {
+    .hamburguer-ceiling {
+        visibility: hidden;
     }
 }
 
@@ -94,6 +145,35 @@
 
     /*Works*/
 
+    .works-grid-display {
+        width: 100%;
+        margin: 1em auto;
+        height: 100%;
+    }
+
+    .works-img-container {
+        margin: 0em auto;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+
+    }
+
+    .works-grid-images {
+        margin: 0 auto;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+    }
+
+    .works-grid-images img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
     /*Services*/
 
     /*Contacts*/
@@ -125,22 +205,25 @@
     .hamburguer-navbar-content {
         width: 30%;
     }
+
+    .works-grid-display {
+        max-width: 90%;
+    }
+
+}
+
+
+@media screen and (min-width: 1000px) {
+
+
+    .works-grid-display {
+        max-width: 75%;
+    }
+
 }
 
 @media screen and (min-width: 1250px) {
 
-    /* .works-grid-images img {
-        width: 200px;
-        height: 200px;
-        border-radius: 10px;
-        transition: all 0.3s ease;
-    }
-    
-    .works-grid-images img:hover {
-        cursor: pointer;
-        transform: scale(1.05) translateY(-10px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    } */
 
     /* General Layout and typography */
 
@@ -259,8 +342,8 @@
 
     .about-info-row:hover {
         z-index: 50;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        transform: scaleX(1.025);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        transform: scaleX(1.05);
     }
 
     .about-info-row:nth-child(odd) {
@@ -277,12 +360,36 @@
 
     /*Works*/
 
+    .works-grid-display {
+        max-width: 90%;
+    }
+
+    .works-img-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        column-gap: 0;
+        transition: all 0.3s ease;
+    }
+
+    .works-grid-images img {
+        transition: transform 0.3s ease;
+    }
+
+    .works-grid-images:hover img {
+        transform: scale(1.1);
+    }
+
+    .works-grid-images:hover {
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
     /*Services*/
 
     /*Contacts*/
 
     /*Footer*/
-
     .app-footer-lg {
         margin: 0;
         padding: 0;
@@ -396,6 +503,10 @@
 
     /*Works*/
 
+    .works-grid-display {
+        max-width: 60%;
+    }
+
     /*Services*/
 
     /*Contacts*/
@@ -436,6 +547,14 @@
 
     /*Works*/
 
+    .works-grid-display {
+        max-width: 50%;
+    }
+
+    .works-grid-images {
+        grid-gap: 1.5em;
+    }
+
     /*Services*/
 
     /*Contacts*/
@@ -456,11 +575,11 @@
     /*Home*/
 
     .banner-images-container {
-        max-height: 1050px;
+        max-height: 1250px;
     }
 
     .main-carrousel-img {
-        max-height: 1150px;
+        max-height: 1250px;
     }
 
     .banner-displays {
@@ -471,6 +590,11 @@
     /*About*/
 
     /*Works*/
+
+    .works-grid-display {
+        max-width: 40%;
+    }
+
 
     /*Services*/
 
@@ -492,11 +616,11 @@
     /*Home*/
 
     .banner-images-container {
-        max-height: 1300px;
+        max-height: 1500px;
     }
 
     .main-carrousel-img {
-        max-height: 1400px;
+        max-height: 1500px;
     }
 
     .banner-displays {
