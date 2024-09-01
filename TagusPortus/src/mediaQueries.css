@@ -35,6 +35,10 @@
         height: 200px;
     }
 
+    .services-options img {
+        width: 325px;
+    }
+
 }
 
 @media screen and (min-width: 400px) {
@@ -56,6 +60,11 @@
         width: 350px;
         height: 250px;
     }
+
+    .services-options img {
+        width: 350px;
+    }
+
 }
 
 @media screen and (min-height: 600px) {
@@ -175,6 +184,19 @@
     }
 
     /*Services*/
+
+    .services-info {
+        width: 80%;
+        align-items: center;
+    }
+
+    .services-info p {
+        width: 80%;
+    }
+
+    .services-options img {
+        width: 550px;
+    }
 
     /*Contacts*/
 
@@ -387,6 +409,56 @@
 
     /*Services*/
 
+    .services-container {
+        width: 90%;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(0, auto);
+        gap: 4em 3em;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: visible;
+        width: 100%;
+    }
+
+    .services-info {
+        justify-content:flex-start;
+        align-items: flex-start;
+    }
+
+    .services-options {
+        transition: all 0.3s ease;
+    }
+
+    .services-options:hover {
+        transform: translateY(-15px);
+    }
+
+    .services-options::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -40px;
+        width: 100%;
+        height: 35px;
+        border-radius: 0 0 10px 10px;
+        background-color: #E6CCB2;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .services-options:hover::before {
+        opacity: 1;
+    }
+
+    .services-filter {
+        margin-bottom: 2em;
+    }
+
     /*Contacts*/
 
     /*Footer*/
@@ -470,10 +542,6 @@
         font-size: 1.3rem;
     }
 
-    .cta-btn {
-        width: 200px;
-        padding: 1.5em;
-    }
 
     /*Navbar*/
 
@@ -504,10 +572,22 @@
     /*Works*/
 
     .works-grid-display {
-        max-width: 60%;
+        max-width: 80%;
     }
 
     /*Services*/
+
+    .services-filter {
+        margin-right: 2em;
+    }
+
+    .services-container {
+        width: 80%;
+    }
+
+    .services-grid {
+        width: 90%;
+    }
 
     /*Contacts*/
 
@@ -531,11 +611,11 @@
     /*Home*/
 
     .banner-images-container {
-        max-height: 1200px;
+        max-height: 950px;
     }
 
     .main-carrousel-img {
-        max-height: 1250px;
+        max-height: 950px;
     }
 
     .banner-displays {
@@ -548,7 +628,7 @@
     /*Works*/
 
     .works-grid-display {
-        max-width: 50%;
+        max-width: 55%;
     }
 
     .works-grid-images {
@@ -556,6 +636,20 @@
     }
 
     /*Services*/
+
+    .services-container {
+        width: 60%;
+    }
+
+    .services-grid {
+        width: 90%;
+    }
+
+
+    .services-filter {
+        font-size: 1.2rem
+    }
+
 
     /*Contacts*/
 
@@ -575,11 +669,11 @@
     /*Home*/
 
     .banner-images-container {
-        max-height: 1250px;
+        max-height: 1050px;
     }
 
     .main-carrousel-img {
-        max-height: 1250px;
+        max-height: 1100px;
     }
 
     .banner-displays {
@@ -592,7 +686,7 @@
     /*Works*/
 
     .works-grid-display {
-        max-width: 40%;
+        max-width: 50%;
     }
 
 

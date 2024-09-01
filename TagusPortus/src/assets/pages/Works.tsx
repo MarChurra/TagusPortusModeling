@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import workImages from '../../workImagesDB.tsx';
+import CallToActionBtn from '../components/CallToActionBtn.tsx';
 
 const Works: React.FC = () => {
 
@@ -34,6 +35,10 @@ const Works: React.FC = () => {
           })
           }
         </div>
+        <CallToActionBtn
+        description="Consultar Serviços"
+        link='/services'
+      />
       </section>
 
       {expandedImage ? (

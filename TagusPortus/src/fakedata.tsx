@@ -4,7 +4,7 @@ const servicesData: { title: string, imgUrl: string, description: string, price:
     {
         title: 'Renovação Casa de Banho',
         imgUrl: '/images/3d-bathroom.png',
-        description: 'Renovação completa da sua casa de banho',
+        description: 'Uma renovação completa da sua casa de banho',
         price: 2999,
     },
     {
@@ -15,14 +15,14 @@ const servicesData: { title: string, imgUrl: string, description: string, price:
     },
     {
         title: 'Renovação Sala de Estar',
-        imgUrl: '/images/3d-bedroom.png',
+        imgUrl: '/images/3d-livingroom.png',
         description: 'Renove a sua sala de estar, de forma a estar o mais confortável possível enquanto descansa',
         price: 1999,
     },
     {
         title: 'Renovação Cozinha',
         imgUrl: '/images/3d-kitchen.png',
-        description: 'Está à procura da cozinha dos seus sonhos? Não procure mais, veja o que possamos fazer por si',
+        description: 'Está à procura da cozinha dos seus sonhos? Não procure mais, veja o que podemos fazer por si',
         price: 3999,
     },
     {
@@ -34,7 +34,7 @@ const servicesData: { title: string, imgUrl: string, description: string, price:
     {
         title: 'Construção Vivenda',
         imgUrl: '/images/3d-vivenda.png',
-        description: 'Procura um espaço moderno e confortável para viver? Temos precisamente a solução de vivendas modernas que necessita',
+        description: 'Procura um espaço moderno e confortável para viver? Temos precisamente as melhores soluções de vivendas modernas que necessita',
         price: 300000,
     },
 ]
