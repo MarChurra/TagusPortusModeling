@@ -14,12 +14,12 @@ exports.handler = async (event, context) => {
     } catch (err) {
         console.error('Error parsing JSON input', err)
         return {
-            statusCode: 400, // A bad request
-            body: JSON.stringify({ message: 'Invalid JSON input', error: err.message })
+            statusCode: 400, // Throw a bad request
+            body: JSON.stringify({ message: 'Invalid JSON input', error: err.message }) 
         }
     }
 
-    const { fName, lName, userEmail, userRequest } = parsedBody // Use parsedBody instead of parsing again
+    const { fName, lName, userEmail, userRequest } = parsedBody
 
     const transporter = nodemailer.createTransport({
         service: 'Outlook',
