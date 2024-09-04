@@ -4,7 +4,7 @@ import { useState } from 'react'
 const Contacts: React.FC = () => {
 
   //Declare API Key 
-  const APIKey = apiKey.key
+
 
   //Form States
   const [fName, setFName] = useState<string>('')
