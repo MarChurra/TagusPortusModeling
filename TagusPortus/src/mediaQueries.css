@@ -295,6 +295,7 @@
         width: auto;
         height: var(--navbar-height);
         list-style-type: none;
+        margin-right: 1em;
     }
 
     .navigation-lg-screen .navigation-lg-screen li,
@@ -457,6 +458,7 @@
 
     .services-filter {
         margin-bottom: 2em;
+        font-size: 1.1rem;
     }
 
     /*Contacts*/
