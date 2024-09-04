@@ -15,7 +15,7 @@ exports.handler = async (event, context) => {
         console.error('Error parsing JSON input', err)
         return {
             statusCode: 400, // Throw a bad request
-            body: JSON.stringify({ message: 'Invalid JSON input', error: err.message }) 
+            body: JSON.stringify({ message: 'Invalid JSON input', error: err.message })
         }
     }
 
@@ -29,8 +29,9 @@ exports.handler = async (event, context) => {
         }
     })
 
+    //The email will come from the tagusportus adress, instead of the users adress, in order avoid complications with nodemailer. 
     const mailOptions = {
-        from: userEmail,
+        from: 'tagusportus@outlook.pt',
         to: 'tagusportus@outlook.pt',
         subject: `${fName} ${lName} - Pedido de Esclarecimento / Orçamento`,
         text: userRequest
