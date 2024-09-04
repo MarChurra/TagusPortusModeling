@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import apiKey from '../../api-key.json'
+
 
 const Contacts: React.FC = () => {
 
