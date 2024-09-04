@@ -5,9 +5,9 @@ exports.handler = async (event, context) => {
     let parsedBody
 
     try {
-           // Checks if event.body exists and parses it
+        // Checks if event.body exists and parses it
         if (event.body) {
-            parsedBody = JSON.parse(event.body)
+            parsedBody = JSON.parse(event.body) // Parse the body
         } else {
             throw new Error('Request body is missing')
         }
@@ -19,7 +19,7 @@ exports.handler = async (event, context) => {
         }
     }
 
-    const { fName, lName, userEmail, userRequest } = JSON.parse(event.body)
+    const { fName, lName, userEmail, userRequest } = parsedBody // Use parsedBody instead of parsing again
 
     const transporter = nodemailer.createTransport({
         service: 'Outlook',
@@ -32,7 +32,7 @@ exports.handler = async (event, context) => {
     const mailOptions = {
         from: userEmail,
         to: 'tagusportus@outlook.pt',
-        subject: ` ${fName} ${lName} - Pedido de Esclarecimento / Orçamento`,
+        subject: `${fName} ${lName} - Pedido de Esclarecimento / Orçamento`,
         text: userRequest
     }
 
@@ -43,6 +43,7 @@ exports.handler = async (event, context) => {
             body: JSON.stringify({ message: 'E-mail enviado com sucesso!' })
         }
     } catch (err) {
+        console.error('Error sending email', err)
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Não foi possível enviar o e-mail', error: err.message })
