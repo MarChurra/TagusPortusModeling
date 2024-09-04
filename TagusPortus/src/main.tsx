@@ -16,6 +16,7 @@ import '/src/app.css'
 import '/src/animations.css'
 import '/src//mediaQueries.css'
 
+// Para utilizar todas as funcionalidades da app, por favor aceder à mesma através de https://tagusportus.netlify.app 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
