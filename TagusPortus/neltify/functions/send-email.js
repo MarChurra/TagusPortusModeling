@@ -1,6 +1,24 @@
 const nodemailer = require('nodemailer')
 
 exports.handler = async (event, context) => {
+
+    let parsedBody
+
+    try {
+           // Checks if event.body exists and parses it
+        if (event.body) {
+            parsedBody = JSON.parse(event.body)
+        } else {
+            throw new Error('Request body is missing')
+        }
+    } catch (err) {
+        console.error('Error parsing JSON input', err)
+        return {
+            statusCode: 400, // A bad request
+            body: JSON.stringify({ message: 'Invalid JSON input', error: err.message })
+        }
+    }
+
     const { fName, lName, userEmail, userRequest } = JSON.parse(event.body)
 
     const transporter = nodemailer.createTransport({
@@ -27,7 +45,7 @@ exports.handler = async (event, context) => {
     } catch (err) {
         return {
             statusCode: 500,
-            body: JSON.stringify({ message: 'Não foi possível enviar o e-mail', err })
+            body: JSON.stringify({ message: 'Não foi possível enviar o e-mail', error: err.message })
         }
     }
 }
