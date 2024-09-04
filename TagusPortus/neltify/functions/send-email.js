@@ -29,7 +29,7 @@ exports.handler = async (event, context) => {
         }
     })
 
-    //The email will come from the tagusportus adress, instead of the users adress, in order avoid complications with nodemailer. 
+    //The email will come from the tagusportus adress, instead of the users adress, in order avoid complications with nodemailer authentication. 
     const mailOptions = {
         from: 'tagusportus@outlook.pt',
         to: 'tagusportus@outlook.pt',
