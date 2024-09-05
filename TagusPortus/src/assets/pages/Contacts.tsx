@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { APIProvider, Map, AdvancedMarker } from '@vis.gl/react-google-maps'
+import api from '../../api-key.json'
 
 
 const Contacts: React.FC = () => {
 
   //Declare API Key 
-
+  const apiKey = api.key
 
   //Form States
   const [fName, setFName] = useState<string>('')
@@ -59,9 +61,14 @@ const Contacts: React.FC = () => {
 
       const result = await response.json()
 
+
+      //Sends the request to the "server" for processing and clears the content in the form
       if (response.ok) {
         notification(result.message, 'sucess')
-      } else {
+        setUserRequest('')
+      }
+      //Sends the user a message of failure and maintain the content of the form, for correction
+      else {
         notification('Erro ao enviar o e-mail', 'fail')
       }
     }
@@ -69,7 +76,6 @@ const Contacts: React.FC = () => {
       notification('Erro ao enviar o e-mail.', 'fail');
     }
   }
-
 
   return (
     <>
@@ -82,27 +88,27 @@ const Contacts: React.FC = () => {
           <input
             type="text"
             value={fName}
-            placeholder='Introduza o seu primeiro nome'
+            placeholder='Primeiro nome'
             onChange={(e) => setFName(e.target.value)}
           />
           <input
             type="text"
             value={lName}
-            placeholder='Introduza o seu nome apelido'
+            placeholder='Apelido'
             onChange={(e) => setLName(e.target.value)}
             required
           />
           <input
             type="number"
             value={mobileNumber}
-            placeholder='Introduza o seu contacto telefónico'
+            placeholder='Contacto Telefónico'
             onChange={(e) => setMobileNumber(e.target.value)}
             required
           />
           <input
             type="email"
             value={userEmail}
-            placeholder='Introduza o seu endereço de email'
+            placeholder='E-mail'
             onChange={(e) => setUserEmail(e.target.value)}
             required
           />
@@ -114,11 +120,28 @@ const Contacts: React.FC = () => {
             required
           ></textarea>
           <button type="submit">Enviar Pedido</button>
-          <div className="message">{submitMessage ? <p>{submitMessage}</p> : null}</div>
+          {submitMessage ? <div className="contacts-notification"> <p>{submitMessage}</p> </div> : null}
         </form>
-
-        <div className="location-info"></div>
-      </section>
+        <section className="location-info">
+          <APIProvider apiKey={apiKey}>
+            <Map
+              mapId={'f7e5242eb4e737a'}
+              defaultZoom={15}
+              defaultCenter={{ lat: 38.6765229251886, lng: -9.164671861177789 }}
+              gestureHandling={'greedy'}
+              disableDefaultUI={true}
+              className="map-container"
+            >
+              <AdvancedMarker position={{ lat: 38.6765229251886, lng: -9.164671861177789 }} />
+            </Map>
+          </APIProvider>
+          <address>
+            Av. Dom Nuno Álvares Pereira
+            <br />
+            2800-181 Almada
+          </address>
+        </section>
+      </section >
     </>
   )
 }

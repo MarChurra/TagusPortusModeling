@@ -39,6 +39,11 @@
         width: 325px;
     }
 
+    .map-container {
+        width: 300px;
+        height: 300px;
+    }
+
 }
 
 @media screen and (min-width: 400px) {
@@ -199,6 +204,20 @@
     }
 
     /*Contacts*/
+
+    .contact-form {
+        max-width: 40%;
+    }
+
+    .contact-form input {
+        padding: 0.5em 2em;
+    }
+
+    .map-container {
+        margin: 2em auto 1em auto;
+        width: 500px;
+        height: 500px;
+    }
 
     /*Footer*/
 
@@ -426,7 +445,7 @@
     }
 
     .services-info {
-        justify-content:flex-start;
+        justify-content: flex-start;
         align-items: flex-start;
     }
 
@@ -462,6 +481,15 @@
     }
 
     /*Contacts*/
+
+    .contact-form {
+        max-width: 25%;
+    }
+
+    .map-container {
+        width: 750px;
+        height: 500px;
+    }
 
     /*Footer*/
     .app-footer-lg {
@@ -593,6 +621,19 @@
 
     /*Contacts*/
 
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button,
+    address {
+        font-size: 1.1rem;
+    }
+
+    .contact-form textarea {
+        min-width: 25vw;
+        max-width: 25vw;
+        min-height: 20vh;
+    }
+
     /*Footer*/
     .social-media-icon,
     .social-media-icon a,
@@ -654,6 +695,15 @@
 
 
     /*Contacts*/
+    .contacts-container {
+        width: 50%;
+    }
+
+    .contact-form textarea {
+        min-width: 20vw;
+        max-width: 20vw;
+        min-height: 15vh;
+    }
 
     /*Footer*/
 
