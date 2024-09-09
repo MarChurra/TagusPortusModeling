@@ -26,8 +26,6 @@ const Services: React.FC = () => {
 
   return (
     <>
-      <h2 className='services-heading'>Consulte as nossas soluções</h2>
-
       <section className='services-container'>
         <select
           name="filter-services"

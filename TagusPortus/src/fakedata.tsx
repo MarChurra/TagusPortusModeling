@@ -2,12 +2,6 @@
 
 const servicesData: { title: string, imgUrl: string, description: string, price: number }[] = [
     {
-        title: 'Renovação Casa de Banho',
-        imgUrl: '/images/3d-bathroom.png',
-        description: 'Uma renovação completa da sua casa de banho',
-        price: 2999,
-    },
-    {
         title: 'Renovação Quarto',
         imgUrl: '/images/3d-bedroom.png',
         description: 'Renove os seus quartos e fique com o seu espaço de conforto impecável',
@@ -24,6 +18,12 @@ const servicesData: { title: string, imgUrl: string, description: string, price:
         imgUrl: '/images/3d-kitchen.png',
         description: 'Está à procura da cozinha dos seus sonhos? Não procure mais, veja o que podemos fazer por si',
         price: 3999,
+    },
+    {
+        title: 'Renovação Casa de Banho',
+        imgUrl: '/images/3d-bathroom.png',
+        description: 'Uma renovação completa da sua casa de banho',
+        price: 2999,
     },
     {
         title: 'Construção Vivenda Dois Pisos',

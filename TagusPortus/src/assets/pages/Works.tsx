@@ -18,7 +18,6 @@ const Works: React.FC = () => {
 
   return (
     <>
-      <h2 className="works-heading"> Um vislumbre dos nossos projetos</h2>
       <section className="works-grid-display">
         <div className='works-img-container'>
           {workImages.map((image, index) => {

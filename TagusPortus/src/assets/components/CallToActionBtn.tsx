@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import scrollToTop from './ScrollToTop';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import scrollToTop from './ScrollToTop'
 
 //Reusable Call to Action Button, for page navigation 
 interface CallToActionBtnProps {
-    link: string;
-    description: string;
+    link: string
+    description: string
 }
 
 const CallToActionBtn: React.FC<CallToActionBtnProps> = ({ link, description }) => {
@@ -14,7 +14,7 @@ const CallToActionBtn: React.FC<CallToActionBtnProps> = ({ link, description }) 
             onClick={scrollToTop}>
             {description}
         </Link>
-    );
-};
+    )
+}
 
-export default CallToActionBtn;
+export default CallToActionBtn

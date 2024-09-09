@@ -437,7 +437,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: minmax(0, auto);
-        gap: 4em 3em;
+        gap: 4.5em 2em;
         transition: all 0.3s ease;
         position: relative;
         overflow: visible;
@@ -612,7 +612,7 @@
     }
 
     .services-container {
-        width: 80%;
+        width: 85%;
     }
 
     .services-grid {
@@ -681,7 +681,7 @@
     /*Services*/
 
     .services-container {
-        width: 60%;
+        width: 70%;
     }
 
     .services-grid {
