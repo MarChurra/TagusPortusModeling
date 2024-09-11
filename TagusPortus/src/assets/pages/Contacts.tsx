@@ -73,7 +73,8 @@ const Contacts: React.FC = () => {
         setMobileNumber('')
         setUserEmail('')
         setUserRequest('')
-        
+        const userText = document.getElementById('request')
+        userText.value = ''
         setLoadingRequest(false)
       }
       //Sends the user a message of failure and maintain the content of the form, for correction
