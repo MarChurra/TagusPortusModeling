@@ -95,16 +95,14 @@ body,
 }
 
 .logo {
-    width: 150px;
+    width: 125px;
     margin-left: 1.5em;
     cursor: pointer;
     z-index: 180;
+    padding-top: 0.5em;
 }
 
-
-
 /*Navbar-Hamburguer-Menu*/
-
 .hamburguer-button {
     position: relative;
     width: 100%;
@@ -125,10 +123,11 @@ body,
 }
 
 .hamburguer-navbar-content {
+    margin-top: 0.5em;
     position: fixed;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 60%;
     min-height: 100vh;
     max-height: 100vh;
     z-index: 50;
@@ -385,14 +384,8 @@ strong {
     overflow: hidden;
     border-radius: 10px;
     width: 90%;
-    margin: 0 auto;
-}
-
-.works-heading {
-    margin: 1.5em auto 1em auto;
-    width: 80%;
-    text-align: center;
-    color: #465464;
+    height: 100%;
+    margin: 1.5em auto 0.5em auto;
 }
 
 .works-img-container {
@@ -464,19 +457,14 @@ strong {
     line-height: 1.5;
 }
 
-.services-heading {
-    margin: 1.5em auto;
-    text-align: center;
-}
-
 .services-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5em;
+    gap: 2em;
     width: 90%;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .services-grid {
@@ -485,7 +473,7 @@ strong {
     justify-content: center;
     align-items: center;
     gap: 3em;
-    margin-bottom: 2em;
+    margin-bottom: 2.5em;
 }
 
 .services-options {
@@ -579,10 +567,12 @@ strong {
 .contact-form textarea {
     border: #774936 1px solid;
     max-width: 90vw;
-    min-height: 15vh;
-    min-width: 60vw;
+    min-height: 25vh;
+    max-height: 50vh;
+    min-width: 70vw;
     border-radius: 10px;
     padding: 0.5em 1em;
+    overflow-y: auto;
 }
 
 .contact-form textarea:focus {
@@ -704,12 +694,24 @@ strong {
     margin: 2.5em auto;
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 80%;
     justify-content: center;
     align-items: flex-start;
-    gap: 2em;
+    gap: 1.5em;
     line-height: 1.5;
     color: #465464;
+}
+
+.policies-containers p,
+.policies-containers span li {
+    color: #465464;
+    width: 95%;
+    line-height: 1.5;
+    text-underline-offset: 2.5px;
+}
+
+.policies-containers ul li {
+    margin-bottom: 1em;
 }
 
 .not-found-container {
@@ -801,7 +803,7 @@ body.disabled {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 1em;
-    margin-top: 1em;
+    margin: 1em 0;
 }
 
 .reject-btn,

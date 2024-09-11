@@ -5,7 +5,7 @@ const CookiesModal: React.FC<{ manageCookies: (accept: boolean) => void }> = ({ 
       <div className="cookies-overlay"></div>
       <div className="cookies-modal">
         <h3>Valorizamos a sua privacidade</h3>
-        <p>Usamos cookies para melhorar a sua experiência a navegar pelo nosso site, ao oferecer serviços, anúncios e contéudos personalizados, para além de analizarmos o nosso tráfico.
+        <p>Usamos cookies para melhorar a sua experiência a navegar pelo nosso site.
           Ao clicar em "Aceitar Tudo", consente em utilizar as nossas cookies.
         </p>
         <div className="cookies-consent">

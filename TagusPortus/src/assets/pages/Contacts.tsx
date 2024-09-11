@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { APIProvider, Map, AdvancedMarker } from '@vis.gl/react-google-maps'
 import api from '../../api-key.json'
-
+import LoadingComponent from '../components/LoadingComponent'
 
 const Contacts: React.FC = () => {
 
@@ -15,6 +15,7 @@ const Contacts: React.FC = () => {
   const [userEmail, setUserEmail] = useState<string>('')
   const [submitMessage, setUserMessage] = useState<string>('')
   const [userRequest, setUserRequest] = useState<string>('')
+  const [loadingRequest, setLoadingRequest] = useState<boolean>(false)
 
   // Email validation regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -44,6 +45,7 @@ const Contacts: React.FC = () => {
     }
 
     try {
+      setLoadingRequest(true)
 
       const response = await fetch('/.netlify/functions/send-email', {
         method: 'POST',
@@ -66,10 +68,12 @@ const Contacts: React.FC = () => {
       if (response.ok) {
         notification(result.message, 'sucess')
         setUserRequest('')
+        setLoadingRequest(false)
       }
       //Sends the user a message of failure and maintain the content of the form, for correction
       else {
         notification('Erro ao enviar o e-mail', 'fail')
+        setLoadingRequest(false)
       }
     }
     catch (error) {
@@ -115,13 +119,13 @@ const Contacts: React.FC = () => {
           <textarea
             name="request"
             id="request"
-            placeholder='Escreve aqui o seu pedido'
+            placeholder='Escreva aqui o seu pedido'
             onChange={(e) => setUserRequest(e.target.value)}
             required
           ></textarea>
           <button type="submit">Enviar Pedido</button>
-          {submitMessage ? <div className="contacts-notification"> <p>{submitMessage}</p> </div> : null}
-        </form>
+          {loadingRequest ? <LoadingComponent /> : submitMessage ? <div className="contacts-notification"> < p > {submitMessage}</p> </div> : null}
+        </form >
         <section className="location-info">
           <APIProvider apiKey={apiKey}>
             <Map

@@ -10,4 +10,4 @@ const LoadingComponent: React.FC = () => {
     );
 }
 
-export default LoadingComponent;
+export default LoadingComponent

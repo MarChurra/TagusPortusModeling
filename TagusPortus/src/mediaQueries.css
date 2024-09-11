@@ -69,7 +69,6 @@
     .services-options img {
         width: 350px;
     }
-
 }
 
 @media screen and (min-height: 600px) {
@@ -483,9 +482,15 @@
     /*Contacts*/
 
     .contact-form {
-        max-width: 25%;
+        max-width: 20%;
     }
-
+    
+    .contact-form textarea {
+        min-width: 30vw;
+        max-width: 60vw;
+        min-height: 20vh;
+        max-height: 50vh;
+    }
     .map-container {
         width: 750px;
         height: 500px;
@@ -548,6 +553,13 @@
         display: flex;
         gap: 1.5em;
         margin-left: 4em;
+    }
+
+    .cookies-modal {
+        width: 50%;
+        border-radius: 5px;
+        left: 10px;
+        bottom: 10px;
     }
 
 }
@@ -629,9 +641,14 @@
     }
 
     .contact-form textarea {
-        min-width: 25vw;
-        max-width: 25vw;
+        min-width: 35vw;
+        max-width: 50vw;
         min-height: 20vh;
+        max-height: 40vh;
+    }
+
+    .contact-form {
+        width: 15%;
     }
 
     /*Footer*/
