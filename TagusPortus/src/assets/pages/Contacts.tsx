@@ -73,8 +73,6 @@ const Contacts: React.FC = () => {
         setMobileNumber('')
         setUserEmail('')
         setUserRequest('')
-        const userText = document.getElementById('request')
-        userText.value = ''
         setLoadingRequest(false)
       }
       //Sends the user a message of failure and maintain the content of the form, for correction
@@ -125,7 +123,7 @@ const Contacts: React.FC = () => {
           />
           <textarea
             name="request"
-            id="request"
+            value={userEmail}
             placeholder='Escreva aqui o seu pedido'
             onChange={(e) => setUserRequest(e.target.value)}
             required
