@@ -652,6 +652,11 @@
         width: 15%;
     }
 
+    .contacts-notification,
+    .contacts-container .loader {
+        bottom: 20%;
+    }
+
     /*Footer*/
     .social-media-icon,
     .social-media-icon a,
