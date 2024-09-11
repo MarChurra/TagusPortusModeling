@@ -4,7 +4,6 @@ import api from '../../api-key.json'
 import LoadingComponent from '../components/LoadingComponent'
 
 const Contacts: React.FC = () => {
-
   //Declare API Key 
   const apiKey = api.key
 
@@ -35,8 +34,8 @@ const Contacts: React.FC = () => {
 
 
   //Add logic and time out for the sucess or fail notificaiton
-  const notification = (message: string, type: 'sucess' | 'fail'): void => {
-    if (type === 'sucess') {
+  const notification = (message: string, type: 'success' | 'fail'): void => {
+    if (type === 'success') {
       setUserMessage(message)
     }
     else if (type === 'fail') {
@@ -79,7 +78,7 @@ const Contacts: React.FC = () => {
 
       //Sends the request to the "server" for processing and clears the content in the form
       if (response.ok) {
-        notification(result.message, 'sucess')
+        notification(result.message, 'success')
 
         setFormData({
           fName: '',
@@ -102,6 +101,8 @@ const Contacts: React.FC = () => {
     }
   }
 
+  console.log(formData)
+
   return (
     <>
       <section className="contacts-container">
@@ -112,35 +113,40 @@ const Contacts: React.FC = () => {
 
           <input
             type="text"
+            name="fName"
             value={fName}
-            placeholder='Primeiro nome'
+            placeholder="Primeiro nome"
             onChange={handleChange}
+            required
           />
           <input
             type="text"
+            name="lName"
             value={lName}
-            placeholder='Apelido'
+            placeholder="Apelido"
             onChange={handleChange}
             required
           />
           <input
             type="number"
+            name="mobileNumber"
             value={mobileNumber}
-            placeholder='Contacto Telefónico'
+            placeholder="Contacto Telefónico"
             onChange={handleChange}
             required
           />
           <input
             type="email"
+            name="userEmail"
             value={userEmail}
-            placeholder='E-mail'
+            placeholder="E-mail"
             onChange={handleChange}
             required
           />
           <textarea
-            name="request"
+            name="userRequest"
             value={userRequest}
-            placeholder='Escreva aqui o seu pedido'
+            placeholder="Escreva aqui o seu pedido"
             onChange={handleChange}
             required
           ></textarea>
