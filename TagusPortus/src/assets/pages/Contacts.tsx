@@ -123,7 +123,7 @@ const Contacts: React.FC = () => {
           />
           <textarea
             name="request"
-            value={userEmail}
+            value={userRequest}
             placeholder='Escreva aqui o seu pedido'
             onChange={(e) => setUserRequest(e.target.value)}
             required
