@@ -123,7 +123,6 @@ body,
 }
 
 .hamburguer-navbar-content {
-    margin-top: 0.5em;
     position: fixed;
     top: 0;
     right: 0;
@@ -160,6 +159,7 @@ body,
     display: flex;
     flex-direction: column;
     list-style-type: none;
+    margin-top: 0.5em;
 }
 
 .hamburguer-navbar-content ul li {
