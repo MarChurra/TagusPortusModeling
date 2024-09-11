@@ -723,6 +723,7 @@
         min-height: 15vh;
     }
 
+    .contacts-notification,
     .contacts-container .loader {
         bottom: 30%;
     }
