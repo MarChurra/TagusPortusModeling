@@ -9,13 +9,26 @@ const Contacts: React.FC = () => {
   const apiKey = api.key
 
   //Form States
-  const [fName, setFName] = useState<string>('')
-  const [lName, setLName] = useState<string>('')
-  const [mobileNumber, setMobileNumber] = useState<string>('')
-  const [userEmail, setUserEmail] = useState<string>('')
+  const [formData, setFormData] = useState({
+    fName: '',
+    lName: '',
+    mobileNumber: '',
+    userEmail: '',
+    userRequest: ''
+  })
+
+  const { fName, lName, mobileNumber, userEmail, userRequest } = formData
+
   const [submitMessage, setUserMessage] = useState<string>('')
-  const [userRequest, setUserRequest] = useState<string>('')
   const [loadingRequest, setLoadingRequest] = useState<boolean>(false)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData({
+      ...formData,
+      [name]: value
+    })
+  }
 
   // Email validation regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -68,11 +81,14 @@ const Contacts: React.FC = () => {
       if (response.ok) {
         notification(result.message, 'sucess')
 
-        setFName('')
-        setLName('')
-        setMobileNumber('')
-        setUserEmail('')
-        setUserRequest('')
+        setFormData({
+          fName: '',
+          lName: '',
+          mobileNumber: '',
+          userEmail: '',
+          userRequest: ''
+        })
+
         setLoadingRequest(false)
       }
       //Sends the user a message of failure and maintain the content of the form, for correction
@@ -98,38 +114,40 @@ const Contacts: React.FC = () => {
             type="text"
             value={fName}
             placeholder='Primeiro nome'
-            onChange={(e) => setFName(e.target.value)}
+            onChange={handleChange}
           />
           <input
             type="text"
             value={lName}
             placeholder='Apelido'
-            onChange={(e) => setLName(e.target.value)}
+            onChange={handleChange}
             required
           />
           <input
             type="number"
             value={mobileNumber}
             placeholder='Contacto Telefónico'
-            onChange={(e) => setMobileNumber(e.target.value)}
+            onChange={handleChange}
             required
           />
           <input
             type="email"
             value={userEmail}
             placeholder='E-mail'
-            onChange={(e) => setUserEmail(e.target.value)}
+            onChange={handleChange}
             required
           />
           <textarea
             name="request"
             value={userRequest}
             placeholder='Escreva aqui o seu pedido'
-            onChange={(e) => setUserRequest(e.target.value)}
+            onChange={handleChange}
             required
           ></textarea>
+
           <button type="submit">Enviar Pedido</button>
           {loadingRequest ? <LoadingComponent /> : submitMessage ? <div className="contacts-notification"> < p > {submitMessage}</p> </div> : null}
+
         </form >
         <section className="location-info">
           <APIProvider apiKey={apiKey}>
