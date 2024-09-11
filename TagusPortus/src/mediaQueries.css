@@ -484,13 +484,14 @@
     .contact-form {
         max-width: 20%;
     }
-    
+
     .contact-form textarea {
         min-width: 30vw;
         max-width: 60vw;
         min-height: 20vh;
         max-height: 50vh;
     }
+
     .map-container {
         width: 750px;
         height: 500px;
@@ -720,6 +721,10 @@
         min-width: 20vw;
         max-width: 20vw;
         min-height: 15vh;
+    }
+
+    .contacts-container .loader {
+        bottom: 30%;
     }
 
     /*Footer*/
