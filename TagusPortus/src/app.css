@@ -615,6 +615,16 @@ strong {
     text-shadow: 0 0 2px black;
 }
 
+.contacts-container .loader {
+    position: fixed;
+    z-index: 999;
+    bottom: 10%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
 .location-info {
     margin: 1.5em auto;
 }
