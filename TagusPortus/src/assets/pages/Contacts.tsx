@@ -68,6 +68,10 @@ const Contacts: React.FC = () => {
       if (response.ok) {
         notification(result.message, 'sucess')
         setUserRequest('')
+        setFName('')
+        setLName('')
+        setMobileNumber('')
+        setUserEmail('')
         setLoadingRequest(false)
       }
       //Sends the user a message of failure and maintain the content of the form, for correction
