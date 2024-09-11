@@ -67,11 +67,13 @@ const Contacts: React.FC = () => {
       //Sends the request to the "server" for processing and clears the content in the form
       if (response.ok) {
         notification(result.message, 'sucess')
-        setUserRequest('')
+
         setFName('')
         setLName('')
         setMobileNumber('')
         setUserEmail('')
+        setUserRequest('')
+        
         setLoadingRequest(false)
       }
       //Sends the user a message of failure and maintain the content of the form, for correction
